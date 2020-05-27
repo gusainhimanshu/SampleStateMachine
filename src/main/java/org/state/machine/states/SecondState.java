@@ -10,7 +10,7 @@ public class SecondState implements IState {
 
     @Override
     public void handle() {
-        System.out.println(secondState);
+        System.out.println("Current state is : " + secondState);
     }
 
     public String getSecondState() {

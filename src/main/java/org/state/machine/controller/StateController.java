@@ -41,9 +41,25 @@ public class StateController {
         System.out.println(machine.currentState.toString()); // "one"
         machine.apply(ruleSet3);
         //System.out.println(machine.currentState.toString()); // "three
-        machine.currentState.handle();
+        if (machine.currentState != null) {
+            machine.currentState.handle();
+        } else {
+            machine.currentState=basePremium;
+        }
 
         machine.apply(ruleSet1);
-        machine.currentState.handle();
+        if (machine.currentState != null) {
+            machine.currentState.handle();
+        } else {
+            machine.currentState=basePremium;
+        }
+        machine.apply(ruleSet1);
+        if (machine.currentState != null) {
+            machine.currentState.handle();
+        } else {
+            System.out.println("Undefined ruleset found, resetting it to base package");
+            machine.currentState=basePremium;
+            machine.currentState.handle();
+        }
     }
 }

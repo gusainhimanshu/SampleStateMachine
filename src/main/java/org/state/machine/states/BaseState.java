@@ -26,6 +26,6 @@ public class BaseState implements IState {
 
     @Override
     public void handle() {
-        System.out.println(state);
+        System.out.println("Current state is : " + state);
     }
 }

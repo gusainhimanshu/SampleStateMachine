@@ -10,7 +10,7 @@ public class AutoState implements IState {
 
     @Override
     public void handle() {
-        System.out.println(autoState);
+        System.out.println("Current state is : " + autoState);
     }
 
     public String getAutoState() {

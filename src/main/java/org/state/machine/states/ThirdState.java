@@ -10,7 +10,7 @@ public class ThirdState implements IState {
 
     @Override
     public void handle() {
-        System.out.println(thirdState);
+        System.out.println("Current state is : " + thirdState);
     }
 
     public String getThirdState() {
