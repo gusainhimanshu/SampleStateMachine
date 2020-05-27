@@ -1,4 +1,6 @@
-package org.himanshu.state.machine.controller;
+package org.state.machine.controller;
+
+import org.state.machine.states.IState;
 
 import java.util.List;
 import java.util.Set;
@@ -6,9 +8,9 @@ import java.util.Set;
 public class StateMachine {
 
     List<Transition> transitions;
-    State currentState;
+    IState currentState;
 
-    public StateMachine(List<Transition> transitions, State startState) {
+    public StateMachine(List<Transition> transitions, IState startState) {
         this.transitions = transitions;
         this.currentState = startState;
     }
@@ -17,7 +19,7 @@ public class StateMachine {
         currentState= getNextState(rules);
     }
 
-    private State getNextState(Set<Rules> rules) {
+    private IState getNextState(Set<Rules> rules) {
         for (Transition transition: transitions) {
             boolean currentStateMatches = transition.fromState.equals(currentState);
             boolean currentConditionMatches = transition.rules.equals(rules);

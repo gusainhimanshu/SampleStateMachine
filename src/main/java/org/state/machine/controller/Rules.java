@@ -1,4 +1,4 @@
-package org.himanshu.state.machine.controller;
+package org.state.machine.controller;
 
 public class Rules {
     String rule;

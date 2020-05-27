@@ -1,10 +1,10 @@
-package org.himanshu.state.machine.controller;
+package org.state.machine.states;
 
-public class State {
+public class BaseState implements IState {
 
     String state;
 
-    public State(String state) {
+    public BaseState(String state) {
         this.state = state;
     }
 
@@ -16,10 +16,16 @@ public class State {
         this.state = state;
     }
 
+
     @Override
     public String toString() {
         return "State{" +
                 "state='" + state + '\'' +
                 '}';
+    }
+
+    @Override
+    public void handle() {
+        System.out.println(state);
     }
 }

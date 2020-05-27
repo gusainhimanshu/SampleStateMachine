@@ -1,4 +1,4 @@
-package org.himanshu.state.machine.states;
+package org.state.machine.states;
 
 public class ThirdState implements IState {
 
